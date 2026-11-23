@@ -243,6 +243,15 @@ Proyecto académico: Sistema de gestión veterinaria Veterinaria Huellitas.
 
 Este proyecto se publica con fines académicos y de revisión. No se ha establecido una licencia de reutilización específica.
 
----
+🔐 13. Seguridad y acceso de demostración
+
+El sistema incorpora un inicio de sesión de demostración para facilitar las pruebas académicas.
+
+Las credenciales actuales son provisionales y no deben utilizarse en un entorno de producción.
+
+Antes de implementar el sistema en un entorno real, se recomienda incorporar autenticación segura, almacenamiento protegido de credenciales y gestión de usuarios y permisos.
+
+La conexión a SQL Server utiliza autenticación de Windows y debe configurarse según la instancia disponible en cada equipo.
+
 
 Veterinaria Huellitas — Gestión, organización y cuidado de nuestras mascotas. 🐾
