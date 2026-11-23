@@ -38,9 +38,11 @@ Microsoft.Data.SqlClient| Conexión entre C# y SQL Server
 QuestPDF| Generación de documentos PDF
 Visual Studio 2022| Entorno de desarrollo
 
-🏗️ 4. Estructura del proyecto
+🏗️ 4. Arquitectura del proyecto
 
-El proyecto está organizado en carpetas para mantener separados los modelos, el acceso a datos, los recursos y las interfaces del sistema.
+El sistema Veterinaria Huellitas presenta una estructura organizada por carpetas, separando la interfaz gráfica, los modelos de datos, la conexión con la base de datos y los recursos visuales.
+
+📂 Estructura de directorios
 
 VeterinariaHuellitas/
 │
@@ -51,6 +53,9 @@ VeterinariaHuellitas/
 │   ├── Dueño.cs
 │   ├── Mascota.cs
 │   └── ConsultaMedica.cs
+│
+├── Recursos/
+│   └── fondo-inicio.jpg
 │
 ├── Ventanas/
 │   ├── Login.xaml
@@ -64,20 +69,33 @@ VeterinariaHuellitas/
 │   ├── HistorialClínico.xaml
 │   └── HistorialClínico.xaml.cs
 │
-├── Recursos/
-│
 ├── App.xaml
 ├── App.xaml.cs
 ├── MainWindow.xaml
 ├── MainWindow.xaml.cs
 └── VeterinariaHuellitas.csproj
 
-Descripción de las carpetas
+📋 Descripción de los componentes
 
-- Datos: contiene las clases encargadas de establecer la conexión y gestionar el acceso a SQL Server.
-- Modelos: contiene las clases que representan las entidades principales del sistema.
-- Ventanas: contiene las interfaces gráficas XAML y sus respectivos archivos de código C#.
-- Recursos: almacena los elementos visuales utilizados por la aplicación.
+Carpeta o archivo| Responsabilidad
+"Datos/"| Gestiona la conexión con SQL Server.
+"Modelos/"| Define las entidades y estructuras de datos del sistema.
+"Recursos/"| Almacena imágenes y elementos visuales.
+"Ventanas/"| Contiene las interfaces gráficas y su lógica de funcionamiento.
+"App.xaml"| Define la configuración y los recursos generales de la aplicación.
+"MainWindow.xaml"| Contiene la ventana principal de inicio de la aplicación.
+"VeterinariaHuellitas.csproj"| Define la configuración del proyecto y sus dependencias.
+
+🔄 Organización del funcionamiento
+
+La aplicación organiza sus responsabilidades de la siguiente manera:
+
+1. Presentación: las ventanas WPF y los archivos XAML permiten la interacción con el usuario.
+2. Modelos: representan los datos de propietarios, mascotas y consultas médicas.
+3. Acceso a datos: la clase "Conexion.cs" establece la comunicación con SQL Server.
+4. Persistencia: SQL Server almacena la información del sistema.
+
+Esta organización facilita el mantenimiento, la comprensión y la ampliación de las funcionalidades de Veterinaria Huellitas.
 
 🗄️ 5. Diseño de la base de datos
 
